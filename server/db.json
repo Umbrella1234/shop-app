@@ -1,0 +1,87 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Монитор",
+      "price": 5000
+    },
+    {
+      "id": 2,
+      "name": "Телевизор",
+      "price": 10000
+    }
+  ],
+  "carts": [
+    {
+      "userId": 123,
+      "products": [
+        {
+          "id": 1,
+          "quantity": 4
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "userId": "userId",
+      "timestamp": "some utc time",
+      "productIds": [
+        "productIds"
+      ],
+      "productCount": 0,
+      "discount": "сколько скинули"
+    }
+  ],
+  "users": [
+    {
+      "id": 123,
+      "firstname": "firstname",
+      "lastname": "lastname",
+      "middlename": "middlename",
+      "isAnonymous": false
+    },
+    {
+      "id": 12345,
+      "firstname": null,
+      "lastname": null,
+      "middlename": null,
+      "isAnonymous": true
+    },
+    {
+      "id": 123456,
+      "firstname": null,
+      "lastname": null,
+      "middlename": null,
+      "isAnonymous": true
+    }
+  ],
+  "orderDiscounts": [
+    {
+      "quantity": 2,
+      "discountPercent": 2
+    },
+    {
+      "quantity": 5,
+      "discountPercent": 5
+    },
+    {
+      "quantity": 10,
+      "discountPercent": 8
+    }
+  ],
+  "sumDiscounts": [
+    {
+      "sum": 10000,
+      "discountPercent": 5
+    },
+    {
+      "sum": 15000,
+      "discountPercent": 10
+    },
+    {
+      "sum": 20000,
+      "discountPercent": 15
+    }
+  ]
+}
