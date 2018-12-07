@@ -1,6 +1,6 @@
 import { createStore, compose, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import rootReducer from '../reducers/rootReducer'
+import rootReducer from '../ducks/rootReducer'
 
 const configureStore = initialState => {
   const enhancer = compose(

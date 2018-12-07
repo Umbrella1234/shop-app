@@ -3,12 +3,96 @@
     {
       "id": 1,
       "name": "Монитор",
-      "price": 5000
+      "price": 5000,
+      "image": "monitor.jpg",
+      "weight": 50,
+      "size": "800x1000x495"
     },
     {
       "id": 2,
       "name": "Телевизор",
-      "price": 10000
+      "price": 10000,
+      "image": "tv.jpeg",
+      "weight": 50,
+      "size": "800x1000x495"
+    },
+    {
+      "id": 3,
+      "name": "Пылесос",
+      "price": 12000,
+      "image": "vaccumCleaner.jpeg",
+      "weight": 50,
+      "size": "800x1000x495"
+    },
+    {
+      "id": 4,
+      "name": "Утюг",
+      "price": 13000,
+      "image": "utug.jpg",
+      "weight": 50,
+      "size": "800x1000x495"
+    },
+    {
+      "id": 5,
+      "name": "Микроволновая печь",
+      "price": 14000,
+      "image": "microwave.jpeg",
+      "weight": 50,
+      "size": "800x1000x495"
+    },
+    {
+      "id": 6,
+      "name": "Телефон",
+      "price": 15000,
+      "image": "cellphone.jpg",
+      "weight": 50,
+      "size": "800x1000x495"
+    },
+    {
+      "id": 7,
+      "name": "Ноутбук",
+      "price": 17000,
+      "image": "laptop.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Персональный компьютер",
+      "price": 20000,
+      "image": "pc.jpg",
+      "weight": 50,
+      "size": "800x1000x495"
+    },
+    {
+      "id": 9,
+      "name": "Наушники",
+      "price": 1000,
+      "image": "headphones.jpg",
+      "weight": 50,
+      "size": "800x1000x495"
+    },
+    {
+      "id": 10,
+      "name": "Чайник",
+      "price": 2500,
+      "image": "kettel.jpeg",
+      "weight": 50,
+      "size": "800x1000x495"
+    },
+    {
+      "id": 11,
+      "name": "Кофеварка",
+      "price": 3500,
+      "image": "coffeMachine.jpeg",
+      "weight": 50,
+      "size": "800x1000x495"
+    },
+    {
+      "id": 12,
+      "name": "Печь",
+      "price": 7500,
+      "image": "oven.jpeg",
+      "weight": 50,
+      "size": "800x1000x495"
     }
   ],
   "carts": [
@@ -17,22 +101,28 @@
       "products": [
         {
           "id": 1,
-          "quantity": 4
+          "quantity": 1
+        },
+        {
+          "id": 2,
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "quantity": 1
+        },
+        {
+          "id": 4,
+          "quantity": 1
+        },
+        {
+          "id": 5,
+          "quantity": 1
         }
       ]
     }
   ],
-  "orders": [
-    {
-      "userId": "userId",
-      "timestamp": "some utc time",
-      "productIds": [
-        "productIds"
-      ],
-      "productCount": 0,
-      "discount": "сколько скинули"
-    }
-  ],
+  "orders": [],
   "users": [
     {
       "id": 123,
