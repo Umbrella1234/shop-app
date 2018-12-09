@@ -192,6 +192,46 @@
       "productsCount": 2,
       "price": 54781.33,
       "discount": 11220.270000000004
+    },
+    {
+      "userId": 4540673801991204,
+      "timeStamp": "2018-12-09T19:19:59.638Z",
+      "products": [
+        {
+          "id": 2,
+          "quantity": 1,
+          "name": "Телевизор",
+          "price": 10000,
+          "image": "tv.jpeg",
+          "weight": 50,
+          "size": "800x1000x495"
+        },
+        {
+          "id": 1,
+          "quantity": 1,
+          "name": "Монитор",
+          "price": 5000,
+          "image": "monitor.jpg",
+          "weight": 50,
+          "size": "800x1000x495"
+        }
+      ],
+      "productsCount": 2,
+      "price": 14250,
+      "discount": 750
+    },
+    {
+      "userId": 5752595460059874,
+      "timeStamp": "2018-12-09T19:26:49.776Z",
+      "products": [
+        {
+          "id": 1,
+          "quantity": 1
+        }
+      ],
+      "productsCount": 1,
+      "price": 5000,
+      "discount": 0
     }
   ],
   "users": [
@@ -225,6 +265,20 @@
     },
     {
       "id": 384934173620968,
+      "firstname": null,
+      "lastname": null,
+      "middlename": null,
+      "isAnonymous": true
+    },
+    {
+      "id": 4540673801991204,
+      "firstname": null,
+      "lastname": null,
+      "middlename": null,
+      "isAnonymous": true
+    },
+    {
+      "id": 5752595460059874,
       "firstname": null,
       "lastname": null,
       "middlename": null,

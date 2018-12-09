@@ -19,6 +19,7 @@ class Orders extends Component {
       <div>Имя {this.props.userData.firstname || ANONYMOUS_USER_NAME}</div>
       <div>Фамилия {this.props.userData.lastname || ANONYMOUS_USER_NAME}</div>
       <div>Отчество {this.props.userData.middlename || ANONYMOUS_USER_NAME}</div>
+      <div>Email: {this.props.userData.email || 'unknown email'}</div>
       <div>Цена: {formatPrice(price)}</div>
       <div>Размер скидки: {formatPrice(discount)}</div>
       <div>Дата совершения заказа: {moment(timeStamp).format(DATE_FORMAT)}</div>

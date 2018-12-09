@@ -21,6 +21,7 @@ module.exports = (req, res, next) => {
       firstname: null,
       lastname: null,
       middlename: null,
+      email: null,
       isAnonymous: true
     }
     users.push(userData).write()
