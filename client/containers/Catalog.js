@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Col, Row } from 'reactstrap'
 import { Link } from 'react-router-dom'
+import numeralize from 'numeralize-ru'
 import Alerts from './Alerts'
 import { Block } from '../components/Block'
 import { Product } from '../components/Product'
@@ -44,7 +45,12 @@ class Catalog extends Component {
             <h1>
               В <Link to={routes.cart.getLink()}>корзине </Link>{' '}
               {cartProducts.length
-                ? `${productsInCart} товара на сумму ${formatPrice(priceWithoutDiscount)}`
+                ? `${productsInCart} ${numeralize.pluralize(
+                  productsInCart,
+                  'товар',
+                  'товара',
+                  'товаров'
+                )} на сумму ${formatPrice(priceWithoutDiscount)}`
                 : 'нет товаров'}
             </h1>
           </Col>

@@ -26,7 +26,7 @@ module.exports = function (req, res) {
   const isZeroQuantity = productQuantity === 0
 
   if (productQuantity < 0) {
-    res.send(getErrorMessage('Cant set product quantity to less than zero'))
+    res.status(400).send(getErrorMessage('Cant set product quantity to less than zero'))
     return
   }
 
@@ -45,7 +45,7 @@ module.exports = function (req, res) {
 
   if (isZeroQuantity) {
     if (!productInCartData) {
-      res.send(getErrorMessage('Product is not in cart'))
+      res.status(400).send(getErrorMessage('Product is not in cart'))
       return
     }
 

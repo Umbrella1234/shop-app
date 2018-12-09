@@ -13,7 +13,7 @@ module.exports = function (req, res) {
   let { productId } = req.query
 
   if (!productId) {
-    return res.send(getErrorMessage('Product id is not provided'))
+    return res.status(400).send(getErrorMessage('Product id is not provided'))
   }
 
   productId = +productId

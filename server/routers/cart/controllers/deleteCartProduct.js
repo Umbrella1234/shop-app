@@ -28,7 +28,7 @@ module.exports = function (req, res) {
   productId = +productId
 
   if (!cartData) {
-    res.send(getErrorMessage('User has no cart, nothing to delete from'))
+    res.status(400).send(getErrorMessage('User has no cart, nothing to delete from'))
     return
   }
 

@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
   const { db } = req.app.locals
 
   if (!userId) {
-    res.send(getErrorMessage('UserId cookie is missing'))
+    res.status(401).send(getErrorMessage('UserId cookie is missing'))
     return
   }
 

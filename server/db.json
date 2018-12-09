@@ -133,19 +133,6 @@
           "quantity": 1
         }
       ]
-    },
-    {
-      "userId": 384934173620968,
-      "products": [
-        {
-          "id": 1,
-          "quantity": 2
-        },
-        {
-          "id": 2,
-          "quantity": 1
-        }
-      ]
     }
   ],
   "orders": [
@@ -188,6 +175,23 @@
       "productsCount": 1,
       "price": 5000,
       "discount": 0
+    },
+    {
+      "userId": 384934173620968,
+      "timeStamp": "2018-12-09T19:11:17.796Z",
+      "products": [
+        {
+          "id": 4,
+          "quantity": 4
+        },
+        {
+          "id": 5,
+          "quantity": 1
+        }
+      ],
+      "productsCount": 2,
+      "price": 54781.33,
+      "discount": 11220.270000000004
     }
   ],
   "users": [

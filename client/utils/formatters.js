@@ -1,8 +1,6 @@
-// fix me
+export const formatInteger = int => int.toLocaleString().replace(',', ' ')
 
-const formatInteger = int => int.toLocaleString().replace(',', ' ')
-
-export function formatPrice (num) {
+export const formatPrice = num => {
   const integerName = 'р.'
   const decimalName = 'коп.'
 

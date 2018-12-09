@@ -18,7 +18,7 @@ module.exports = function (req, res) {
     .value()
 
   if (!cart) {
-    res.send(getErrorMessage('user has no cart'))
+    res.send(getErrorMessage.status(400)('user has no cart'))
     return
   }
 
