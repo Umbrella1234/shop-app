@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux'
 import { productsReducer } from './productsDucks'
-import { orderReducer } from './orderDucks'
+import { ordersReducer } from './ordersDucks'
 import { cartReducer } from './cartDucks'
 import { alertReducer } from './alertDucks'
 
 export default combineReducers({
   products: productsReducer,
   cart: cartReducer,
-  order: orderReducer,
+  orders: ordersReducer,
   alerts: alertReducer
 })

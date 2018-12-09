@@ -1,18 +1,25 @@
 import Catalog from './containers/Catalog'
-// import Orders from './containers/Orders'
+import Orders from './containers/Orders'
 import Cart from './containers/Cart'
 
-export default [
-  {
+function getPath () {
+  return this.path
+}
+
+export default {
+  catalog: {
     path: '/catalog',
-    component: Catalog
+    component: Catalog,
+    getLink: getPath
   },
-  {
+  cart: {
     path: '/cart',
-    component: Cart
+    component: Cart,
+    getLink: getPath
   },
-  /* {
+  orders: {
     path: '/orders',
-    component: Orders
-  } */
-]
+    component: Orders,
+    getLink: getPath
+  }
+}

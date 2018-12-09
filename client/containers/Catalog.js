@@ -1,10 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Col, Row } from 'reactstrap'
+import { Link } from 'react-router-dom'
+import Alerts from './Alerts'
 import { Block } from '../components/Block'
 import { Product } from '../components/Product'
+import routes from '../routes'
 import { startFetchProducts } from '../ducks/productsDucks'
-import { startFetchCart, addProductToCart } from '../ducks/cartDucks'
+import {
+  startFetchCart,
+  addProductToCart,
+  removeProductFromCart
+} from '../ducks/cartDucks'
+import { formatPrice } from '../utils/formatters'
 
 class Catalog extends Component {
   componentDidMount () {
@@ -21,7 +29,8 @@ class Catalog extends Component {
       isProductsError,
       isCartLoading,
       isCartError,
-      addProductToCart
+      addProductToCart,
+      removeProductFromCart
     } = this.props
 
     const showSpinner =
@@ -29,29 +38,33 @@ class Catalog extends Component {
 
     return (
       <Block showSpinner={showSpinner}>
+        <Alerts />
         <Row>
           <Col xs={12}>
             <h1>
-              В корзине{' '}
+              В <Link to={routes.cart.getLink()}>корзине </Link>{' '}
               {cartProducts.length
-                ? `${productsInCart} товара на сумму ${priceWithoutDiscount}`
+                ? `${productsInCart} товара на сумму ${formatPrice(priceWithoutDiscount)}`
                 : 'нет товаров'}
             </h1>
           </Col>
         </Row>
         <Row>
-          {products.map(product => (
-            <Col key={product.id} xs={12} md={4}>
-              <Product
-                {...product}
-                isLoading={loadingProductIds.some(id => id === product.id)}
-                isInCart={cartProducts.some(
-                  cartProduct => cartProduct.id === product.id
-                )}
-                addProductToCart={addProductToCart}
-              />
-            </Col>
-          ))}
+          {products.map(product => {
+            const isInCart = cartProducts.some(
+              cartProduct => cartProduct.id === product.id
+            )
+            return (
+              <Col key={product.id} xs={12} md={4}>
+                <Product
+                  {...product}
+                  isLoading={loadingProductIds.some(id => id === product.id)}
+                  isInCart={isInCart}
+                  onClick={isInCart ? removeProductFromCart : addProductToCart}
+                />
+              </Col>
+            )
+          })}
         </Row>
       </Block>
     )
@@ -72,6 +85,8 @@ export default connect(
     startFetchProducts: () => dispatch(startFetchProducts()),
     startFetchCart: () => dispatch(startFetchCart()),
     addProductToCart: (productId, productName) =>
-      dispatch(addProductToCart(productId, productName))
+      dispatch(addProductToCart(productId, productName)),
+    removeProductFromCart: (productId, productName) =>
+      dispatch(removeProductFromCart(productId, productName))
   })
 )(Catalog)

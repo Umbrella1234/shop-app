@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'reactstrap'
 import styled from 'styled-components'
+import { formatPrice } from '../utils/formatters'
 
 const StyledProductImage = styled.img`
   width: 100%;
@@ -30,18 +31,18 @@ export const Product = ({
   price,
   isInCart,
   isLoading,
-  addProductToCart
+  onClick
 }) => (
   <StyledProductWrapper>
     <StyledName>{name}</StyledName>
     <StyledProductImage src={`productPictures/${image}`} alt={name} />
-    <StyledPrice>Цена: {price} р</StyledPrice>
+    <StyledPrice>Цена: {formatPrice(price)}</StyledPrice>
     <Button
-      color={isInCart ? 'success' : 'info'}
+      color={isInCart ? 'danger' : 'info'}
       disabled={isLoading}
-      onClick={() => addProductToCart(id, name)}
+      onClick={() => onClick(id, name)}
     >
-      Добавить в корзину
+      {isInCart ? 'Удалить из корзины' : 'Добавить в корзину'}
     </Button>
   </StyledProductWrapper>
 )

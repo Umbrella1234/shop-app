@@ -1,13 +1,9 @@
 const express = require('express')
+const getProducts = require('./controllers/getProducts')
 const userMiddleware = require('../../middleware/userMiddleware')
 
 const router = express.Router()
 
-router.get('/', userMiddleware, (req, res) => {
-  const { db } = req.app.locals
-  const products = db.get('products').value()
-
-  res.send({ products })
-})
+router.get('/', userMiddleware, getProducts)
 
 module.exports = router

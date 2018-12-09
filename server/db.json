@@ -27,7 +27,7 @@
     {
       "id": 4,
       "name": "Утюг",
-      "price": 13000,
+      "price": 13000.4,
       "image": "utug.jpg",
       "weight": 50,
       "size": "800x1000x495"
@@ -52,7 +52,9 @@
       "id": 7,
       "name": "Ноутбук",
       "price": 17000,
-      "image": "laptop.jpg"
+      "image": "laptop.jpg",
+      "weight": 50,
+      "size": "800x1000x495"
     },
     {
       "id": 8,
@@ -73,7 +75,7 @@
     {
       "id": 10,
       "name": "Чайник",
-      "price": 2500,
+      "price": 2500.5,
       "image": "kettel.jpeg",
       "weight": 50,
       "size": "800x1000x495"
@@ -97,49 +99,128 @@
   ],
   "carts": [
     {
-      "userId": 123,
+      "userId": 9757469198439940,
       "products": [
         {
           "id": 1,
           "quantity": 1
+        }
+      ]
+    },
+    {
+      "userId": 2033594156298217,
+      "products": [
+        {
+          "id": 1,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "userId": 3579898822321326,
+      "products": [
+        {
+          "id": 1,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "userId": 6622045600745701,
+      "products": [
+        {
+          "id": 1,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "userId": 384934173620968,
+      "products": [
+        {
+          "id": 1,
+          "quantity": 2
         },
         {
           "id": 2,
-          "quantity": 1
-        },
-        {
-          "id": 3,
-          "quantity": 1
-        },
-        {
-          "id": 4,
-          "quantity": 1
-        },
-        {
-          "id": 5,
           "quantity": 1
         }
       ]
     }
   ],
-  "orders": [],
-  "users": [
+  "orders": [
     {
-      "id": 123,
-      "firstname": "firstname",
-      "lastname": "lastname",
-      "middlename": "middlename",
-      "isAnonymous": false
+      "userId": 384934173620968,
+      "timeStamp": "2018-12-09T17:34:07.706Z",
+      "products": [
+        {
+          "id": 1,
+          "quantity": 3,
+          "name": "Монитор",
+          "price": 5000,
+          "image": "monitor.jpg",
+          "weight": 50,
+          "size": "800x1000x495"
+        },
+        {
+          "id": 2,
+          "quantity": 1,
+          "name": "Телевизор",
+          "price": 10000,
+          "image": "tv.jpeg",
+          "weight": 50,
+          "size": "800x1000x495"
+        }
+      ],
+      "productsCount": 2,
+      "price": 21250,
+      "discount": 3750
     },
     {
-      "id": 12345,
+      "userId": 384934173620968,
+      "timeStamp": "2018-12-09T17:34:30.038Z",
+      "products": [
+        {
+          "id": 1,
+          "quantity": 1
+        }
+      ],
+      "productsCount": 1,
+      "price": 5000,
+      "discount": 0
+    }
+  ],
+  "users": [
+    {
+      "id": 9757469198439940,
       "firstname": null,
       "lastname": null,
       "middlename": null,
       "isAnonymous": true
     },
     {
-      "id": 123456,
+      "id": 2033594156298217,
+      "firstname": null,
+      "lastname": null,
+      "middlename": null,
+      "isAnonymous": true
+    },
+    {
+      "id": 3579898822321326,
+      "firstname": null,
+      "lastname": null,
+      "middlename": null,
+      "isAnonymous": true
+    },
+    {
+      "id": 6622045600745701,
+      "firstname": null,
+      "lastname": null,
+      "middlename": null,
+      "isAnonymous": true
+    },
+    {
+      "id": 384934173620968,
       "firstname": null,
       "lastname": null,
       "middlename": null,

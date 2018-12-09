@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { BASE_URL } from '../constants'
 import { createReducer } from '../utils/createReducer'
 
 const FETCH_PRODUCTS = 'FETCH_PRODUCTS'
@@ -21,7 +22,7 @@ const fetchProductsError = () => ({
 export const startFetchProducts = () => dispatch => {
   dispatch(fetchProducts())
   axios
-    .get('/api/v1/products')
+    .get(`${BASE_URL}/products`)
     .then(res => {
       dispatch(fetchProductsSuccess(res.data.products))
     })
